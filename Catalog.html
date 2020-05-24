@@ -5,58 +5,83 @@
     <meta charset="utf-8">
     <title>Nerds</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="index" href="index.html">
   </head>
   <body>
       <header>
         <nav>
             <a>
-              <img src="img/index-logo.svg" width="" height="" alt="Логотип Nerds">
+              <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Nerds">
             </a>
             <ul>
-              <li><a href="blank.html">Студия</a></li>
-              <li><a href="blank.html">Клиенты</a></li>
-              <li><a href="blank.html">Магазин</a></li>
-              <li><a href="blank.html">Контакты</a></li>
+              <li><a href="#">Студия</a></li>
+              <li><a href="#">Клиенты</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Контакты</a></li>
             </ul>
-            <a href="blank.html">Корзина</a>
+            <a href="#">Корзина</a>
           </nav>
         </header>
         <main>
             <h1>Магазин готовых шаблонов</h1>
-            <div>
-            <h2>Фильтры</h2>
             <section>
-                <h3>Стоимость:</h3>
+              <h2>фильтры</h2>
+                <p>Стоимость:</p>
                 <button type="button"></button>
                 <button type="button"></button>
-                <p>от</p>
+                  <p>от</p>
                 <input type="number">
-                <p>до</p>
+                  <p>до</p>
                 <input type="number">
             </section>
             <section>
-                <h3>Сетка:</h3>
+              <form action="https://echo.htmlacademy.ru" method="get">
+                <fieldset>
+                <legend>Сетка:</legend>
                 <ul>
-                    <li>Адаптивная</li>
-                    <li>Фиксированная</li>
-                    <li>Резиновая</li>
+                    <li>
+                      <input type="radio" name="adaptive" value="adaptive" id="adaptive" checked>
+                      <label for="adaptive">Адаптивная</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="fix" value="fix" id="fix" checked>
+                      <label for="fix">Фиксированная</label></li>
+                    <li>
+                      <input type="radio" name="rubber" value="rubber" id="rubber" checked>
+                      <label for="rubber">Средства для ухода</label>Резиновая</li>
                 </ul>
             </section>
             <section>
-                <h3>Особенности:</h3>
-                <ul>
-                    <li>Слайдер</li>
-                    <li>Блок преимуществ</li>
-                    <li>Новости</li>
-                    <li>Галерея</li>
-                    <li>Корзина</li>
-                </ul>
-                <button type="button">Показать</button>
+                <fieldset>
+                  <legend>Особенности:</legend>
+                  <ul>
+                    <li>
+                      <input type="checkbox" name="slider" id="slider" checked>
+                      <label for="slider">Слайдер</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="advantages" id="advantages" checked>
+                      <label for="advantages">Блок преимуществ</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="news" id="news" checked>
+                      <label for="news">Новости</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name=gallery" id="gallery" checked>
+                      <label for="gallery">Галерея</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="box" id="box" checked>
+                      <label for="box">Корзина</label>
+                    </li>
+                  </ul>
+                  </fieldset>
+                  <a href="#">Показать</a>
             </section>
-            </div>
             <section>
-                <h2>Шаблоны</h2>
-                <h3>Сортировать</h3>
+                <h2>Шаблоны</h2>n
+                <span>Сортировать</span>
                 <ul>
                     <li>По цене</li>
                     <li>По типу</li>
@@ -67,22 +92,41 @@
             </section>
             <section>
                 <a href="#">
-                    <img src="" width="" height="" alt="Sedona">
+                    <img src="img/img-sedona 1.png" width="360" height="580" alt="Sedona">
                 </a>
+                  <h3>sedona</h3>
+                    <p>Информационный сайт для туристов</p>
+                    <a href="#">9900 ₽</a>
                 <a href="#">
-                    <img src="" width="" height="" alt="Pink">
+                    <img src="img/img-pink 1.png" width="358" height="578" alt="Pink">
                 </a>
+                  <h3>pink app</h3>
+                    <p>Продуктовый лендинг приложения для iOS и Android</p>
+                    <a href="#">9900 ₽</a>
                 <a href="#">
-                    <img src="" width="" height="" alt="Borodinski">
+                    <img src="img/img-barbershop 1.png" width="358" height="578" alt="Borodinski">
                 </a>
+                  <h3>barbershop</h3>
+                  <p>Сайт салона красоты.Для мужчин, да.</p>
+                  <a href="#">9900 ₽</a>
                 <a href="#">
-                    <img src="" width="" height="" alt="Mishka">
+                    <img src="img/img-mishka 1.png" width="358" height="578" alt="Mishka">
                 </a>
+                  <h3>mishka</h3>
+                  <p>Интернет-магазин вязаных игрушек</p>
+                  <a href="#">9900 ₽</a>
                 <a href="#">
-                    <img src="" width="" height="" alt="А+">
+                    <img src="img/img-aplus 1.png" width="358" height="578" alt="А+">
                 </a>
+                  <h3>a-plus</h3>
+                  <p>Лендинг курсов повышения квалификации</p>
+                  <a href="#">9900 ₽</a>
                 <a href="#">
-                    <img src="" width="" height="" alt="Кваст">
+                  <img src="img/img-kvast 1.jpg" width="358" height="478" alt="Кваст">
+                  </a>
+                    <h3>кваст/h3>
+                    <p>Промо-сайт производителя крафтового кваса</p>
+                    <a href="#">9900 ₽</a>
             </section>
             <section>
                 <button type="button">1</button>
