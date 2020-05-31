@@ -1,0 +1,298 @@
+:root {
+    --basic-gray: #EEEEEE;
+    --basic-extra-gray: #888888;
+    --basic-black: #000000;
+    --basic-exstra-black: #283136;
+    --basic-red: #FB565A;
+    --basic-green: #00CA74;
+    --basic-yellow: #EFC849;
+    --basic-gray-light: #A6A6A6;
+    --basic-white: #FFFFFF;
+    --basic-more-red: #E74246;
+    --basic-max-red: #D7373B;
+    --basic-more-green: #00BC6C;
+    --basic-max-green: #00AA62;
+    --basic-more-yellow: #EAB534;
+    --basic-max-yelloy: #E5A722;
+  }
+    
+@font-face {
+    font-family: "Roboto-Regular";
+    font-weight: 400;
+    src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+    font-display: swap; }
+  
+@font-face {
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+    src: url("../fonts/Roboto-Bold.woff2") format("woff2");
+    font-display: swap; }
+@font-face {
+    font-family: "Roboto-Medium";
+    font-weight: 700;
+    src: url("../fonts/Roboto-Medium.woff2") format("woff2");
+    font-display: swap; }
+  body {
+    min-width: 1187px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--basic-black);
+    text-transform: capitalize;
+    background-color: var(--basic-extra-gray);
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .navigation {
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--basic-black);
+    background-color: transparent;
+  }
+  .navigation-wrapper {
+    background-color: var(--basic-gray);
+  }
+  .site-navigation {
+    list-style: none;
+  }
+  .site-navigation-current a:not([href]) {
+    background-color: var(--basic-gray);
+  }
+  
+
+  .site-navigation a,
+  .user-navigation a {
+    color: var(--basic-black);
+  }
+  
+  .site-navigation a:hover,
+  .basket-link a:hover, {
+    background-color: var(--basic-red);
+  }
+
+ .site-navigation a:focus,
+  .basket-link a:focus {
+    background-color: var(--basic-gray-light);
+  }
+
+ .slogan{
+    font-family: "Roboto-Medium"; 
+    font-size: 55px;
+    line-height: 55px;
+ }
+ .button-know-more{
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--basic-red);
+    border: none;
+  }
+ .button-know-more:hover,
+ .button-know-more:focus{
+     background-color: var(--basic-more-red);
+ }
+ .button-know-more:active {
+  background-color: var(--basic-max-red);
+  color: var(--basic-gray);
+}
+
+ .products {
+    list-style: none;
+    background-color: var(--basic-white) ;
+
+  }
+  
+ .product-item {
+    text-align: left;
+  }
+  .button-one{
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--basic-red);
+    border: none;
+  }
+  .button-one:hover,
+  .button-one:focus{
+      background-color: var(--basic-more-red);
+  }
+  .button-one:active {
+   background-color: var(--basic-max-red);
+   color: var(--basic-gray);
+ }
+ 
+  .button-two{
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--basic-green);
+    border: none;
+  }
+  .button-two:hover,
+  .button-two:focus{
+      background-color: var(--basic-more-green);
+  }
+  .button-two:active {
+   background-color: var(--basic-max-green);
+   color: var(--basic-gray);
+ }
+  .button-three{
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--basic-yellow);
+    border: none;
+  }
+  .button-three:hover,
+  .button-three:focus{
+      background-color: var(--basic-more-green);
+  }
+  .button-three:active {
+   background-color: var(--basic-max-green);
+   color: var(--basic-gray);
+ }
+  
+ .feature-item h3 {
+    font-family: "Roboto-Bold"; 
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+  
+ .caption{
+    font-family: "Roboto-Medium"; 
+    font-size: 45px;
+    line-height: 45px;
+ }
+ .about-company{
+     border-top: solid 2px var(--basic-gray) ;
+     background-color: var(--basic-white);
+ }
+ .text{
+     font-family: "Roboto-Bold";
+     font-size: 16px;
+     line-height: 24px;
+ }
+
+ .features{
+    list-style-image: url("");
+ }
+.benefit-item{
+    font-family: "Roboto-Bold";
+    font-size: 45px;
+    line-height: 64px;
+}
+.percent{
+    font-family: "Roboto-Bold";
+    font-size: 26px;
+    line-height: 40px;
+}
+.benefit-text{
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    line-height: 18px;
+}
+.about-customers{
+    border-top: solid 2px var(--basic-gray) ;
+    border-bottom:solid 2px var(--basic-gray) ;
+    background-color: var(--basic-white);
+}
+.contact-with-us{
+    height: 319px;
+    width: 308px;
+    background-color: var(--basic-white);
+}
+.button-type{
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--basic-red);
+    border: none;
+  }
+  .button-type:hover,
+  .button-type:focus{
+      background-color: var(--basic-more-red);
+  }
+  .button-type:active {
+   background-color: var(--basic-max-red);
+   color: var(--basic-gray);
+ }
+ 
+.contacts{
+    background-image: "img/map.jpg";
+}
+.text-logo{
+    text-transform: uppercase;
+    font-family: "Roboto-Bold";
+    font-size: 18px;
+    line-height: 30px;
+}
+.text-welcome{
+    font-family: "Roboto-Bold";
+    font-size: 36px;
+    line-height: 36px;
+}
+.modal{
+    height: 590px;
+    width: 960px;
+    background-color: var(--basic-white);
+}
+.type-us{
+    font-family: "Roboto-Bold";
+    font-size: 45px;
+    line-height: auto;
+}
+.footer-social ul {
+    list-style: none;
+  }
+.footer-social a:hover,
+.footer-contacts a:focus {
+  color: var(--basic-more-red);
+}
+.footer-social a:active {
+    color: var(--basic-max-red);
+  }
+.modal-text{
+    font-family: "Roboto-Bold";
+    font-size: 16px;
+    line-height: 18px;
+}
+.button-send{
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--basic-red);
+    border: none;
+  }
+  .button-send:hover,
+  .button-send:focus{
+      background-color: var(--basic-more-red);
+  }
+  .button-send:active {
+   background-color: var(--basic-max-red);
+   color: var(--basic-gray);
+ }
