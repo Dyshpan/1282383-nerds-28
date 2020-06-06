@@ -29,7 +29,7 @@
     font-display: swap; }
 @font-face {
     font-family: "Roboto-Medium";
-    font-weight: 700;
+    font-weight: 500;
     src: url("../fonts/Roboto-Medium.woff2") format("woff2");
     font-display: swap; }
   body {
@@ -39,9 +39,8 @@
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--basic-black);
-    text-transform: capitalize;
     background-color: var(--basic-extra-gray);
     background-position: top center;
     background-repeat: no-repeat;
