@@ -15,6 +15,8 @@
     --basic-more-yellow: #EAB534;
     --basic-max-yelloy: #E5A722;
     --basic-middle-gray: #4D4D4D;
+    --basic-more-gray: #DFDFDF;
+    --basic-max-gray: #D5D5D5;
   }
     
 @font-face {
@@ -45,6 +47,17 @@ img {
   max-width: 100%;
   height: auto;
   }
+
+.page {
+   height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
 
 .navigation {
   font-size: 16px;
@@ -371,4 +384,119 @@ img {
 .catalog-list {
   list-style: none;
 }
-  
+
+.botton-show{
+  background-color: var(--basic-gray);
+}
+
+.button-show:hover,
+.button-show:focus{
+  background-color: var(--basic-more-gray);
+}
+
+.button-show:active {
+  background-color: var(--basic-max-gray);
+  opacity: 0.3;
+}
+
+.sort{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.sort-item{
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.3;
+}
+
+.sort-item:hover,
+.sort-item:focus{
+  opacity: 0.6;
+}
+
+.sort-item:active{
+  color: var(--basic-black);
+}
+
+.botton-down{
+  border: 20px solid transparent; 
+  border-top: 20px solid;
+}
+
+.botton-up{
+  border: 20px solid transparent; 
+  border-bottom: 20px;
+  opacity: 0.3;
+}
+
+.botton-down:hover,
+.botton-down:focus{
+  opacity: 0.6;
+}
+
+.botton-down:active{
+  color: var(--basic-black);
+}
+
+.botton-up:hover,
+.botton-up:focus{
+  opacity: 0.6;
+}
+
+.botton-up:active{
+  color: var(--basic-black);
+}
+
+.catalog-item:hover{
+
+}
+
+.catalog-info {
+  display: none
+}
+
+ a:hover ..catalog-info {
+   display: block
+}
+
+.catalog-category-title:hover,
+.catalog-category-title:focus{
+  color: var(--basic-red);
+}
+
+.catalog-category-title:active{
+  opacity: 0.3;
+}
+
+.botton-price:hover,
+.botton-price:focus{
+  background-color: var(--basic-more-red);
+}
+
+.botton-price:{
+  background-color: var(--basic-max-red);
+}
+
+.pagination-item{
+  background-color: var(--basic-extra-gray);
+}
+
+.pagination-item:hover{
+  background-color:var(--basic-more-gray);
+}
+
+.pagination-item:focus{
+  background-color:var(--basic-max-gray);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  border-radius: 3px;
+  opacity: 0.3;
+}
+
+.pagination-item:active{
+  background: rgba(0, 0, 0, 0.0001);
+  border: 3px solid #DBDBDB;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
