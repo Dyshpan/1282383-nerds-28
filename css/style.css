@@ -39,7 +39,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
   
 img {
@@ -48,7 +48,7 @@ img {
   }
 
 .page {
-   height: 100%;
+  height: 100%;
 }
 
 .page-body {
@@ -63,29 +63,36 @@ img {
   line-height: 30px;
   color: var(--basic-black);
   background-color: transparent;
+  display: flex;
+  justify-content: space-between;
 }
 
 .features {
   margin-bottom: 80px;
 }
 
-.navigation-wrapper {
-  background-color: var(--basic-gray);
-  width: 100%;
-  margin-bottom: 60px;
-}
-
 .site-navigation {
   list-style: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.site-navigation li{
+  margin-left: 44px;
 }
 
 .site-navigation-current a:not([href]) {
   background-color: var(--basic-gray);
 }
   
-.site-navigation a,
-.user-navigation a {
+.site-navigation a{
   color: var(--basic-black);
+}
+
+.basket-link{
+  color:var(--basic-black)
 }
   
 .site-navigation a:hover,
@@ -103,11 +110,23 @@ img {
   font-weight: 500; 
   font-size: 55px;
   line-height: 55px;
+  margin-left: 140px;
+  padding-top: 17px;
+  margin-bottom: 25px;
 } 
 
-.main-header {
-  margin-bottom: 70px;
+.motto{
+  margin-left: 140px;
+}
+
+.header{
   outline-offset: -5px;
+  background-color: var(--basic-gray);
+}
+
+.main-page{
+  width: 100%;
+  background-color: var(--basic-gray);
 }
 
 .button-know-more{
@@ -118,6 +137,11 @@ img {
   text-transform: uppercase;
   background-color: var(--basic-red);
   border: none;
+  width: 240px;
+  height: 50px;
+  padding:17px 54px;
+  margin-left: 140px;
+  margin-top: 38px;
 }
 
 .button-know-more:hover,
@@ -133,9 +157,25 @@ img {
   list-style: none;
   background-color: var(--basic-white) ;
 }
+
+.product-ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
   
 .product-item {
   text-align: left;
+  margin-left: 100px;
+  width: 300px;
+}
+
+.product-item h3{
+  text-transform: uppercase;
+}
+
+.button{
+  padding: 17px 40px;
 }
 
 .button-one{
@@ -146,17 +186,17 @@ img {
   text-transform: uppercase;
   background-color: var(--basic-red);
   border: none;
-  }
+}
 
 .button-one:hover,
 .button-one:focus{
-    background-color: var(--basic-more-red);
-  }
+  background-color: var(--basic-more-red);
+}
 
 .button-one:active {
    background-color: var(--basic-max-red);
    color: var(--basic-gray);
- }
+}
  
 .button-two{
   font: inherit;
@@ -212,11 +252,15 @@ img {
   font-size: 45px;
   line-height: 45px;
 }
+.about-company-columns{
+   display: flex;
+   justify-content: space-between;
+}
 
- .about-company{
+.about-company{
     border-top: solid 2px var(--basic-gray) ;
     background-color: var(--basic-white);
- }
+}
 
  .text{
     font-family: "Roboto";
@@ -267,6 +311,12 @@ img {
   background-color: var(--basic-white);
 }
 
+.customers{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
 .contact-with-us{
   height: 319px;
   width: 308px;
@@ -304,20 +354,38 @@ img {
   line-height: 30px;
 }
 
-.main-header-logo {
+.header-logo {
   width: 160px;
   height: 49px;
+  margin-left: 140px;
+  margin-top: 49px;
 }
 
 .container {
-  width: 1100px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-.navigation-wrapper .container {
+.main-navigation-wrapper {
   display: flex;
   justify-content: space-between;
+  height: 120px;
+  margin-top:75px;
+}
+
+.main{
+  background-color: var(--basic-gray);
+  margin-bottom: 80px;
+  margin-top: -55px;
+  height: 425px;
+  width: 100%;
+}
+
+.site-navigation{
+  display: flex;
+  justify-content: space-between; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text-welcome{
@@ -342,7 +410,7 @@ img {
 
 .footer-social ul {
   list-style: none;
-  }
+}
 
 .footer-social a:hover,
 .footer-contacts a:focus {
@@ -350,8 +418,8 @@ img {
 }
 
 .footer-social a:active {
-    color: var(--basic-max-red);
-  }
+  color: var(--basic-max-red);
+}
 
 .modal-text{
   font-family: "Roboto";
@@ -373,7 +441,7 @@ img {
 .button-send:hover,
 .button-send:focus{
   background-color: var(--basic-more-red);
-  }
+}
 
 .button-send:active {
   background-color: var(--basic-max-red);
@@ -538,4 +606,19 @@ img {
   border: 3px solid #DBDBDB;
   box-sizing: border-box;
   border-radius: 3px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
