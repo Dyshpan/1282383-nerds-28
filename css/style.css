@@ -25,8 +25,13 @@
     src: url("../fonts/Roboto.woff2") format("woff2");
     font-display: swap; }
 
+*,
+*::before,
+*::after { box-sizing: border-box; 
+}
+
 body {
-  min-width: 1187px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -63,6 +68,7 @@ img {
   line-height: 30px;
   color: var(--basic-black);
   background-color: transparent;
+  align-content:  center;
   display: flex;
   justify-content: space-between;
 }
@@ -110,18 +116,17 @@ img {
   font-weight: 500; 
   font-size: 55px;
   line-height: 55px;
-  margin-left: 140px;
-  padding-top: 17px;
-  margin-bottom: 25px;
 } 
 
 .motto{
-  margin-left: 140px;
+  padding-bottom: 38px;
 }
 
 .header{
-  outline-offset: -5px;
   background-color: var(--basic-gray);
+  padding-top: 20px;
+  padding-bottom: 20px;
+
 }
 
 .main-page{
@@ -130,18 +135,9 @@ img {
 }
 
 .button-know-more{
-  font: inherit;
-  text-align: center;
-  color: var(--basic-white);
-  vertical-align: middle;
-  text-transform: uppercase;
   background-color: var(--basic-red);
   border: none;
   width: 240px;
-  height: 50px;
-  padding:17px 54px;
-  margin-left: 140px;
-  margin-top: 38px;
 }
 
 .button-know-more:hover,
@@ -156,29 +152,48 @@ img {
 .products {
   list-style: none;
   background-color: var(--basic-white) ;
+  margin-bottom: 80px;
 }
 
 .product-ul{
   display: flex;
   justify-content: space-between;
   list-style: none;
+  margin: 0px;
+  padding:0px;
 }
   
 .product-item {
   text-align: left;
-  margin-left: 100px;
   width: 300px;
 }
 
+.product-item-img{
+  margin-bottom: 25px;
+}
+
 .product-item h3{
+  margin: 0px;
+  padding:0px;
   text-transform: uppercase;
+}
+
+.product-item p{
+  margin: 0px;
+  padding:0px;
+  padding-bottom: 32px;
+  padding-top: 16px;
+
+}
+
+.product-item-img{
+  height: 146px;
+  width: 300px;
 }
 
 .button{
   padding: 17px 40px;
-}
-
-.button-one{
+  box-sizing: border-box;
   font: inherit;
   text-align: center;
   color: var(--basic-white);
@@ -186,6 +201,11 @@ img {
   text-transform: uppercase;
   background-color: var(--basic-red);
   border: none;
+  display: inline-block;
+}
+
+.button-one{
+  background-color: var(--basic-red);
 }
 
 .button-one:hover,
@@ -199,13 +219,7 @@ img {
 }
  
 .button-two{
-  font: inherit;
-  text-align: center;
-  color: var(--basic-white);
-  vertical-align: middle;
-  text-transform: uppercase;
   background-color: var(--basic-green);
-  border: none;
 }
 
 .button-two:hover,
@@ -219,13 +233,7 @@ img {
 }
 
 .button-three{
-  font: inherit;
-  text-align: center;
-  color: var(--basic-white);
-  vertical-align: middle;
-  text-transform: uppercase;
   background-color: var(--basic-yellow);
-  border: none;
 }
 
 .button-three:hover,
@@ -251,15 +259,19 @@ img {
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
-}
-.about-company-columns{
-   display: flex;
-   justify-content: space-between;
+  margin: 0px;
+  margin-top: 73px;
+  padding:0px
 }
 
-.about-company{
-    border-top: solid 2px var(--basic-gray) ;
+.about-company .container{
     background-color: var(--basic-white);
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-company .container{
+  border-top: solid 2px var(--basic-gray) ;
 }
 
  .text{
@@ -309,6 +321,8 @@ img {
   border-top: solid 2px var(--basic-gray) ;
   border-bottom:solid 2px var(--basic-gray) ;
   background-color: var(--basic-white);
+  margin: 0;
+  padding:0;
 }
 
 .customers{
@@ -324,13 +338,7 @@ img {
 }
 
 .button-type{
-  font: inherit;
-  text-align: center;
-  color: var(--basic-white);
-  vertical-align: middle;
-  text-transform: uppercase;
   background-color: var(--basic-red);
-  border: none;
   }
 .button-type:hover,
 .button-type:focus{
@@ -354,24 +362,18 @@ img {
   line-height: 30px;
 }
 
-.header-logo {
-  width: 160px;
-  height: 49px;
-  margin-left: 140px;
-  margin-top: 49px;
+.header-logo img {
+  height: auto;
+  width: 100%;
+  display:block;
 }
 
 .container {
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 21px;
+  max-width: 1200px;
 }
 
-.main-navigation-wrapper {
-  display: flex;
-  justify-content: space-between;
-  height: 120px;
-  margin-top:75px;
-}
 
 .main{
   background-color: var(--basic-gray);
@@ -384,8 +386,12 @@ img {
 .site-navigation{
   display: flex;
   justify-content: space-between; 
-  margin-left: auto;
-  margin-right: auto;
+  margin:0;
+  padding:0;
+}
+
+.site-navigation:first-child{
+  margin-left: 0px;
 }
 
 .text-welcome{
@@ -429,13 +435,7 @@ img {
 }
 
 .button-send{
-  font: inherit;
-  text-align: center;
-  color: var(--basic-white);
-  vertical-align: middle;
-  text-transform: uppercase;
   background-color: var(--basic-red);
-  border: none;
 }
 
 .button-send:hover,
