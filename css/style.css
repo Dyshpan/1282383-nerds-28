@@ -74,7 +74,25 @@ img {
 }
 
 .features {
-  margin-bottom: 80px;
+  list-style: none;
+  margin: 0;
+  padding:0;
+}
+
+.features-item{
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 20px;
+}
+
+.features-item::after{
+  content:"";
+  position: absolute;
+  left:0px;
+  top:11px;
+  width: 25px;
+  height: 2px;
+  background:var(--basic-red);
 }
 
 .site-navigation {
@@ -98,17 +116,17 @@ img {
 }
 
 .basket-link{
-  color:var(--basic-black)
+  color:var(--basic-black);
 }
   
 .site-navigation a:hover,
-.basket-link a:hover, {
-  background-color: var(--basic-red);
+.basket-link:hover {
+  color: var(--basic-red);
 }
 
 .site-navigation a:focus,
-.basket-link a:focus {
-  background-color: var(--basic-gray-light);
+.basket-link:focus {
+  color: var(--basic-gray-light);
 }
 
 .slogan{
@@ -238,7 +256,7 @@ img {
 
 .button-three:hover,
 .button-three:focus{
-    background-color: var(--basic-more-green);
+    background-color: var(--basic-more-yellow);
 }
 
 .button-three:active {
@@ -274,28 +292,42 @@ img {
   border-top: solid 2px var(--basic-gray) ;
 }
 
+.about-company-img{
+  width: 360px;
+  height: 208px;
+  margin-top: 38px;
+  margin-bottom: 38px;
+}
+
  .text{
     font-family: "Roboto";
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+    align-items: center;
 }
 
  .features{
-  list-style-image: url("");
-}
-
-.features-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   margin: 0;
   padding: 0;
-  list-style: none;
-  column-gap: 100px;
 }
 
 .features-item p {
   margin: 0 10px;
+}
+
+.number-information{
+  width: 360px;
+}
+
+.benefits{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding:0px;
+  margin:0px;
 }
 
 .benefit-item{
@@ -303,20 +335,27 @@ img {
   font-weight: 700;
   font-size: 45px;
   line-height: 64px;
+  margin-bottom: 10px;
 }
 
-.percent{
+.percant{
   font-family: "Roboto";
   font-weight: 700;
   font-size: 26px;
   line-height: 40px;
+  vertical-align: text-top;
 }
 
 .benefit-text{
   font-family: "Roboto";
   font-size: 16px;
   line-height: 18px;
+  font-weight: normal;
+  margin: 0;
+  padding:0;
+  height: 37px;
 }
+
 .about-customers{
   border-top: solid 2px var(--basic-gray) ;
   border-bottom:solid 2px var(--basic-gray) ;
@@ -329,17 +368,37 @@ img {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  padding-top:46px;
+  padding-bottom: 44px;
 }
+
+.customer-item:hover,
+.customer-item:focus{
+  background-image: ;
+  }
 
 .contact-with-us{
   height: 319px;
   width: 308px;
   background-color: var(--basic-white);
+  text-align: justify;
+  z-index: 1;
+}
+
+.contact-with-us p{
+  margin-left: 50px;
+}
+
+.contact-with-us a{
+  margin-left: 50px;
+  text-decoration: none;
 }
 
 .button-type{
   background-color: var(--basic-red);
-  }
+  margin-top: 21px;
+}
+
 .button-type:hover,
 .button-type:focus{
   background-color: var(--basic-more-red);
@@ -351,7 +410,11 @@ img {
  }
  
 .contacts{
-  background-image: "img/map.jpg";
+  background: url("../img/map.jpg");
+  width: 100%;
+  height: 416px;
+  padding-top:54px;
+  z-index: 0;
 }
 
 .text-logo{
@@ -360,6 +423,10 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
+  margin: 0;
+  margin-bottom: 22px;
+  padding:0;
+  padding-top:49px;
 }
 
 .header-logo img {
@@ -399,6 +466,22 @@ img {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
+  padding:0px;
+  margin:0px;
+}
+
+.social-button{
+  border-radius: 50px;
+  background-color: var(--basic-gray);
+  width: 81px;
+  height: 81px;
+  margin-top: 68px;
+  padding:0;
+}
+
+.social-button a{
+  height: 81px;
+  width: 81px;
 }
 
 .modal{
@@ -416,6 +499,18 @@ img {
 
 .footer-social ul {
   list-style: none;
+  padding:0;
+  margin:0;
+}
+
+.footer-social .container{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.welcome{
+  margin-left: 139px;
+  margin-top: 75px;
 }
 
 .footer-social a:hover,
