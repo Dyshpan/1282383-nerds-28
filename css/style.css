@@ -118,6 +118,10 @@ img {
 .basket-link{
   color:var(--basic-black);
 }
+
+.basket-link svg{
+  margin-right: 25px;
+}
   
 .site-navigation a:hover,
 .basket-link:hover {
@@ -334,7 +338,6 @@ img {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 45px;
-  line-height: 64px;
   margin-bottom: 10px;
 }
 
@@ -342,14 +345,12 @@ img {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 26px;
-  line-height: 40px;
   vertical-align: text-top;
 }
 
 .benefit-text{
   font-family: "Roboto";
   font-size: 16px;
-  line-height: 18px;
   font-weight: normal;
   margin: 0;
   padding:0;
@@ -378,25 +379,16 @@ img {
   }
 
 .contact-with-us{
-  height: 319px;
   width: 308px;
   background-color: var(--basic-white);
-  text-align: justify;
   z-index: 1;
-}
-
-.contact-with-us p{
-  margin-left: 50px;
-}
-
-.contact-with-us a{
-  margin-left: 50px;
-  text-decoration: none;
+  padding-top:49px;
+  padding-left:50px;
 }
 
 .button-type{
   background-color: var(--basic-red);
-  margin-top: 21px;
+  margin-bottom: 29px;
 }
 
 .button-type:hover,
@@ -411,6 +403,8 @@ img {
  
 .contacts{
   background: url("../img/map.jpg");
+  background-color: blanchedalmond;
+  background-repeat: no-repeat;
   width: 100%;
   height: 416px;
   padding-top:54px;
@@ -422,11 +416,18 @@ img {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 18px;
-  line-height: 30px;
   margin: 0;
   margin-bottom: 22px;
   padding:0;
-  padding-top:49px;
+}
+
+.tel{
+  color:var(--basic-black);
+  margin-bottom: 21px;
+}
+
+.tel:hover{
+  color:var(--basic-red);
 }
 
 .header-logo img {
@@ -470,6 +471,10 @@ img {
   margin:0px;
 }
 
+.footer-element{
+  display: flex;
+}
+
 .social-button{
   border-radius: 50px;
   background-color: var(--basic-gray);
@@ -477,11 +482,7 @@ img {
   height: 81px;
   margin-top: 68px;
   padding:0;
-}
-
-.social-button a{
-  height: 81px;
-  width: 81px;
+  display: inline-block;
 }
 
 .modal{
