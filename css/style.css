@@ -95,53 +95,119 @@ img {
   background:var(--basic-red);
 }
 
-.site-navigation {
+.menu {
   list-style: none;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
+  margin-top: 28px;
+  margin-right: 85px;
 }
 
-.site-navigation li{
+.menu li{
   margin-left: 44px;
 }
 
-.site-navigation-current a:not([href]) {
+.menu-current a:not([href]) {
   background-color: var(--basic-gray);
 }
   
-.site-navigation a{
+.menu a{
   color: var(--basic-black);
 }
 
 .basket-link{
   color:var(--basic-black);
+  margin-top: 25px;
+  margin-right: 5px;
 }
 
 .basket-link svg{
   margin-right: 25px;
 }
+
+.basket-link svg:hover path{
+  fill:var(--basic-red);
+}
   
-.site-navigation a:hover,
+.menu a:hover,
 .basket-link:hover {
   color: var(--basic-red);
 }
 
-.site-navigation a:focus,
+.menu a:focus,
 .basket-link:focus {
   color: var(--basic-gray-light);
 }
 
-.slogan{
-  font-family: "Roboto";
+.slider{
   font-weight: 500; 
   font-size: 55px;
   line-height: 55px;
+  padding-top: 60px;
+  margin-bottom: 28px;
 } 
 
-.motto{
-  padding-bottom: 38px;
+.slider-title{
+  padding-bottom: 25px;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-controls {
+  position: absolute;
+  left: 676px;
+  top:431px;
+  z-index: 20;
+  display: flex;
+  width: 67px;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
+
+.slider-controls .current {
+  background-color: #ffffff;
+}
+
+.site-wrapper-1 {
+  background-color: var(--basic-gray);
+  background-image: url("../img/slide1.png");
+  background-position:right;
+  background-repeat: no-repeat;
+  background-size:760px 431px;
+  height: 425px;
+}
+
+.site-wrapper-2 {
+  background-color: #8996a6;
+  background-image: url("../img/nerds-index-slide2.png");
+}
+
+.site-wrapper-3 {
+  background-color: #9d8b84;
+  background-image: url("../img/nerds-index-slide3.png");
 }
 
 .header{
@@ -177,7 +243,7 @@ img {
   margin-bottom: 80px;
 }
 
-.product-ul{
+.product-list{
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -269,7 +335,6 @@ img {
  }
   
 .feature-item h3 {
-  font-family: "Roboto"; 
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -277,19 +342,24 @@ img {
 }
   
 .caption{
-  font-family: "Roboto"; 
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
   margin: 0px;
   margin-top: 73px;
-  padding:0px
+  padding:0px;
+  margin-bottom:30px;
+}
+
+.caption-text{
+  margin-bottom:40px;
 }
 
 .about-company .container{
     background-color: var(--basic-white);
     display: flex;
     justify-content: space-between;
+    margin-bottom: 60px;
 }
 
 .about-company .container{
@@ -300,7 +370,7 @@ img {
   width: 360px;
   height: 208px;
   margin-top: 38px;
-  margin-bottom: 38px;
+  margin-bottom: 32px;
 }
 
  .text{
@@ -309,8 +379,18 @@ img {
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
-    margin-bottom: 23px;
+    margin-bottom: 38px;
     align-items: center;
+}
+
+.text-text{
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+  align-items: center;
 }
 
  .features{
@@ -342,14 +422,12 @@ img {
 }
 
 .percant{
-  font-family: "Roboto";
   font-weight: 700;
   font-size: 26px;
   vertical-align: text-top;
 }
 
 .benefit-text{
-  font-family: "Roboto";
   font-size: 16px;
   font-weight: normal;
   margin: 0;
@@ -363,6 +441,8 @@ img {
   background-color: var(--basic-white);
   margin: 0;
   padding:0;
+  height: 183px;
+  margin-bottom: 80px;
 }
 
 .customers{
@@ -373,17 +453,34 @@ img {
   padding-bottom: 44px;
 }
 
+.customer-item{
+  opacity: 0.3;
+}
+
+.customer-item a{
+  display: inline-block;
+}
+
 .customer-item:hover,
 .customer-item:focus{
-  background-image: ;
+  opacity: 1;
   }
 
 .contact-with-us{
-  width: 308px;
+  width: 318px;
   background-color: var(--basic-white);
   z-index: 1;
-  padding-top:49px;
+  padding-top:52px;
   padding-left:50px;
+}
+
+.adress{
+  margin-bottom: 0px;
+}
+
+.phone{
+  margin-top: 10px;
+  margin-bottom: 35px;
 }
 
 .button-type{
@@ -409,11 +506,11 @@ img {
   height: 416px;
   padding-top:54px;
   z-index: 0;
+  margin-bottom: 68px;
 }
 
 .text-logo{
   text-transform: uppercase;
-  font-family: "Roboto";
   font-weight: 700;
   font-size: 18px;
   margin: 0;
@@ -445,54 +542,74 @@ img {
 
 .main{
   background-color: var(--basic-gray);
-  margin-bottom: 80px;
-  margin-top: -55px;
+  margin-bottom: 70px;
   height: 425px;
   width: 100%;
+  margin-top:-55px;
 }
 
-.site-navigation{
+.menu{
   display: flex;
   justify-content: space-between; 
   margin:0;
   padding:0;
 }
 
-.site-navigation:first-child{
+.menu:first-child{
   margin-left: 0px;
 }
 
 .text-welcome{
-  font-family: "Roboto";
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
   padding:0px;
   margin:0px;
+  margin-top:10px;
 }
 
 .footer-element{
-  display: flex;
+  display: flex
 }
 
+.social-list{
+  display: flex;
+  position: relative;
+}
 .social-button{
   border-radius: 50px;
   background-color: var(--basic-gray);
   width: 81px;
   height: 81px;
-  margin-top: 68px;
+  margin-left:9px;
   padding:0;
   display: inline-block;
+  position: relative;
+}
+
+.social-button svg{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.social-button:hover{
+  background-color:var(--basic-red);
 }
 
 .modal{
   height: 590px;
   width: 960px;
   background-color: var(--basic-white);
+  display: none;
+}
+
+.modal-show {
+  display: block;
 }
 
 .type-us{
-  font-family: "Roboto";
   font-weight: 700;
   font-size: 45px;
   line-height: auto;
@@ -511,7 +628,7 @@ img {
 
 .welcome{
   margin-left: 139px;
-  margin-top: 75px;
+  display: inline-block;
 }
 
 .footer-social a:hover,
@@ -523,8 +640,58 @@ img {
   color: var(--basic-max-red);
 }
 
+.modal-form{
+  width: 960px;
+  height: 590px;
+  box-shadow: 0 0 5px;
+  padding-left:100px;
+  padding-top:63px;
+  z-index: 1;
+}
+
+.modal p{
+  padding:0;
+  margin:0;
+}
+
+.top-modal{
+  display: flex;
+  justify-content: space-between;
+  width:760px;
+  padding-bottom: 34px;
+}
+
+input,
+label {
+    display: block;
+}
+
+.name-icon-user{
+  margin-right: 40px;
+}
+.name-icon-user,
+.mail-icon-user{
+  width:360px;
+  height: 50px;
+}
+
+.post-icon-user{
+  width:760px;
+  margin-bottom: 47px;
+}
+
+.modal-title{
+  padding:0;
+  margin:0;
+  font-size: 45px;
+  margin-bottom:37px;
+}
+
+label{
+  margin-bottom: 9px;
+}
+
 .modal-text{
-  font-family: "Roboto";
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -532,6 +699,7 @@ img {
 
 .button-send{
   background-color: var(--basic-red);
+  padding:16px 83px;
 }
 
 .button-send:hover,
@@ -542,6 +710,35 @@ img {
 .button-send:active {
   background-color: var(--basic-max-red);
   color: var(--basic-gray);
+}
+
+.botton-close {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.botton-close::before,
+.botton-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: var(--basic-red);
+  opacity: 0.3;
+}
+
+.botton-close::before {
+  transform: rotate(45deg);
+}
+
+.botton-close::after {
+  transform: rotate(-45deg);
 }
 
 
