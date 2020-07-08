@@ -1,13 +1,13 @@
-var loginLink = document.querySelector(".button-type");
-var loginPopup = document.querySelector(".modal");
-var loginClose = loginPopup.querySelector(".botton-close");
+var linkType = document.querySelector(".button-type");
+var typePopup = document.querySelector(".modal");
+var typeClose = typePopup.querySelector(".botton-close");
 
-loginLink.addEventListener("click", function (evt) {
+linkType.addEventListener("click", function (evt) {
   evt.preventDefault();
-  loginPopup.classList.add("modal-show");
+  typePopup.classList.add("modal-show");
 });
 
-loginClose.addEventListener("click", function (evt) {
+typeClose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  loginPopup.classList.remove("modal-show");
+  typePopup.classList.remove("modal-show");
 });

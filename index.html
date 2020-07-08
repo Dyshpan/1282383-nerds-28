@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="fonts/Roboto.woff2" as="font" crossorigin="anonymous">
     <link href="normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/modal.js"></script>
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body class="page-body">
@@ -202,12 +201,13 @@
         </div>
           <p class="modal-text">
           <label class="field" for="post">Текст письма:</label>
-          <textarea class="field post-icon-user" rows="10" cols="45" name="text" placeholder="В свободной форме"></textarea>
+          <textarea class="field post-icon-user" rows="10" cols="45" name="text" placeholder="В свободной форме" id="post"></textarea>
         </p>
-        <button class="button botton-send" type="submit">Отправить</button>
+        <button class="button button-send" type="submit">Отправить</button>
       </form>
-      <button class="botton-close" type="button" aria-label="Закрыть"></button>
+      <button class="button-close" type="button" aria-label="Закрыть"></button>
       </div>
     </section>
+    <script src="js/modal.js"></script>
   </body>
 </html>
