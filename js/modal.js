@@ -1,6 +1,6 @@
 var linkType = document.querySelector(".button-type");
 var typePopup = document.querySelector(".modal");
-var typeClose = typePopup.querySelector(".botton-close");
+var typeClose = typePopup.querySelector(".button-close");
 
 linkType.addEventListener("click", function (evt) {
   evt.preventDefault();

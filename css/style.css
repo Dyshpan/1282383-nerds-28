@@ -78,12 +78,17 @@ img {
   list-style: none;
   margin: 0;
   padding:0;
+  margin-bottom: 73px;
 }
 
 .features-item{
   position: relative;
   padding-left: 32px;
   margin-bottom: 20px;
+}
+
+.features-item:last-child{
+  margin-bottom: 0;
 }
 
 .features-item::after{
@@ -104,6 +109,7 @@ img {
   line-height: 30px;
   margin-top: 28px;
   margin-right: 85px;
+  padding:0;
   display: flex;
   justify-content: space-between; 
 }
@@ -422,11 +428,6 @@ img {
   align-items: center;
 }
 
- .features{
-  margin: 0;
-  padding: 0;
-}
-
 .features-item p {
   margin: 0 10px;
 }
@@ -443,7 +444,7 @@ img {
   margin:0px;
 }
 
-.benefit-item{
+.benefit-number{
   font-family: "Roboto";
   font-weight: 700;
   font-size: 45px;
@@ -490,7 +491,6 @@ img {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  padding-top:46px;
   padding-bottom: 44px;
 }
 
@@ -779,7 +779,7 @@ label{
   width: 19px;
   height: 3px;
   background-color: var(--basic-red);
-  opacity: 0.3;
+  opacity: 0.3;1
 }
 
 .button-close::before {
@@ -790,22 +790,31 @@ label{
   transform: rotate(-45deg);
 }
 
+.button-close:hover,
+.button-close:focus{
+  opacity: 1;
+}
+
+.button-close:active{
+  opacity: 0.1;
+}
+
 
 /*Стилизация каталога*/
 
-.catalog-main .container{
+.catalog-header{
   background-color: var(--basic-gray);
-  margin-bottom: 55px;
+  margin-bottom: 45px;
 }
 
 .catalog-title{
   font-family: "Roboto";
   font-weight: 500;
   font-size: 55px;
-  padding-top:87px;
+  padding-top:47px;
   padding-bottom: 108px;
   line-height: 55px;
-  align:center;
+  text-align:center;
   margin:0;
 }
 
@@ -815,6 +824,7 @@ label{
 
 .active-tab{
   border-bottom: 2px var(--basic-red) solid;
+  padding-bottom: 10px;
 }
 
 .catalog-page{
@@ -832,6 +842,7 @@ label{
   border: none;
   width: 260px;
   margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .range-filter {
@@ -850,17 +861,26 @@ label{
   position: relative;
   height: 41px;
   margin-bottom: 15px;
-  padding-top: 39px;
+  padding-top: 79px;
   padding-right: 20px;
   padding-left: 20px;
   background-color: #f1f1f1;
   border-radius: 5px;
 }
 
+.min-price{
+  margin-top: 8px;
+  margin-right: 40px;
+}
+
+.max-price{
+  margin-top: 8px;
+}
+
 .range-controls .scale {
   height: 2px;
   background: #d7dcde;
-  margin-top:-20px;
+  margin-top:-40px;
 }
 
 .range-controls .bar {
@@ -871,7 +891,7 @@ label{
 
 .range-controls .toggle {
   position: absolute;
-  top: 31px;
+  top: 32px;
   left: 0;
   width: 4px;
   height: 4px;
@@ -885,18 +905,15 @@ label{
 
 .range-controls .toggle-min {
   left: 18px;
-  margin-top:-20px;
 }
 
 .range-controls .toggle-max {
   left: 160px;
-  margin-top:-20px;
 }
 
 .price-controls {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 54px;
+  margin-bottom: 44px;
 }
 
 .price-controls label {
@@ -907,7 +924,7 @@ label{
 }
 
 .price-controls input {
-  width: 60px;
+  width: 75px;
   padding: 10px;
   margin-left: 10px;
   text-align: center;
@@ -917,6 +934,7 @@ label{
   background: #f1f1f1;
   font-family: inherit;
   font-size: inherit;
+  margin-top: -8px;
 }
 
 /*фильтры*/
@@ -931,11 +949,11 @@ label{
   list-style: none;
   font-size: 16px;
   line-height: 19px;
+  margin-bottom: 50px;
 }
 
 .filter-option{
   line-height: 19px;
-
 }
 
 .filter-input-checkbox{
@@ -947,8 +965,8 @@ label{
   position: absolute;
   left: -42px;
   top: 0;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #000000;
   opacity: 0.4;
 }
@@ -958,9 +976,8 @@ label{
   content: "";
   position: absolute;
   left: -40px;
-  top: 4px;
-  width: 10px;
-  height: 5px;
+  width: 15px;
+  height: 10px;
   border-radius: 1px;
   border-left: 2px solid;
   border-bottom: 2px solid ;
@@ -983,8 +1000,8 @@ label{
   position: absolute;
   left: -42px;
   top: -1px;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #000000;
   border-radius: 50%;
   opacity: 0.4;
@@ -993,27 +1010,35 @@ label{
 .filter-input-radio:checked + label::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: -36px;
-  width: 8px;
-  height: 8px;
+  top: 3px;
+  left: -38px;
+  width: 12px;
+  height: 12px;
   background-color: #000000;
   border-radius: 50%;
   opacity: 0.4;
 }
 
-.filter-input-checkbox:hover,
-.filter-input-checkbox:focus{
-  color: var(--basic-extra-gray);
+.filter-input-radio:checked:hover,
+.filter-input-radio:checked + label::after:focus{ 
+   opacity: 1;
+}
+
+.filter-radio{
+  margin-bottom: 20px;
 }
 
 .filter-input-radio{
-  color: var(--basic-middle-gray)
+  color: var(--basic-middle-gray);
 }
   
 .filter-input-radio:hover,
 .filter-input-radio:focus{
-  color: var(--basic-extra-gray);
+  opacity: 1;
+}
+
+label{
+  cursor: pointer;
 }
 
 .catalog-list {
@@ -1024,7 +1049,6 @@ label{
   background-color: var(--basic-gray);
   padding:15px 88px;
   color: black;
-  margin-top: 50px;
 }
 
 .button-show:hover,
@@ -1034,7 +1058,7 @@ label{
 
 .button-show:active {
   background-color: var(--basic-max-gray);
-  opacity: 0.3;
+  color:var(--basic-middle-gray);
 }
 
 .sort{
@@ -1042,7 +1066,7 @@ label{
   font-size: 18px;
   line-height: 30px;
   margin-left:140px;
-  margin-right: 250px;
+  margin-right: 270px;
   text-transform: uppercase;
 }
 
@@ -1076,18 +1100,26 @@ label{
   justify-content: space-between;
   text-transform: uppercase;
   padding:0;
+  margin-top: 10px;
+  margin-right: 3px;
 }
 
 .button-up{
-  border: 10px solid transparent; border-top: 10px solid black;
+  border: 5px solid transparent; border-top: 10px solid black;
+  opacity: 0.2;
   height: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-right: 18px;
 }
 
 .button-down{
-  border: 10px solid transparent; border-bottom: 10px solid black;
-  margin-bottom: 20px;
+  border: 5px solid transparent; border-bottom: 10px solid black;
+  margin-bottom: 25px;
+  opacity: 0.2;
+}
+
+.active{
+  opacity: 1;
 }
 
 .button-down:hover,
@@ -1112,41 +1144,69 @@ label{
   display: flex;
   flex-wrap: wrap;
   margin-left: 140px;
+  margin-top: 35px;
   padding:0;
 }
 
 .catalog-item{
-  margin-right: 10px;
+  margin-right: 38px;
   margin-bottom: 30px;
+  height: 620px;
+  overflow: hidden;
+  position: relative;
+}
+
+.catalog-item:nth-child(2n){
+  margin-right: 0;
 }
 
 .catalog-image{
-  height: 580px;
   width: 360px;
 }
 
-.catalog-item:before{
-  background-color: var(--basic-middle-gray);
-  height: 40px;
-  width:360px;
-  content:"";
-  display: inline-block;
+.catalog-image img{
+  margin-top:-8px;
+}
+
+.catalog-image svg{
+opacity: 0.12;
 }
 
 .catalog-item:hover{
   display: block;
 }
 
+.catalog-item:hover svg{
+  opacity: 1;
+}
+
 .catalog-info {
-  display: none;
   position: absolute;
-  margin-top: -170px;
+  bottom:-100%;
+  left:0;
   background-color:var(--basic-gray);
   width: 100%;
+  text-align:  center;
+}
+
+.catalog-info p{
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.catalog-item:hover .catalog-info{
+  bottom:0;
+  transition: bottom 0.2s ease;
 }
 
  a:hover .catalog-info {
    display: block
+}
+
+.catalog-category-title{
+  text-transform: uppercase;
+  margin-top:26px;
+  margin-bottom: 12px;
 }
 
 .catalog-category-title:hover,
@@ -1163,21 +1223,38 @@ label{
   background-color: var(--basic-more-red);
 }
 
-.button-price:{
-  background-color: var(--basic-max-red);
+.button-price{
+  padding: 17px 72px;
+  margin-bottom: 44px;
 }
 
 .pagination-list{
   display:flex;
   list-style: none;
+  margin-left: 140px;
+  margin-bottom: 60px;
+  margin-top: 25px;
+  padding: 0;
 }
 
 .pagination-item{
-  background-color: var(--basic-extra-gray);
+  background-color: var(--basic-gray);
+  height: 50px;
+  width: 50px;
+  padding-top: 13px;
+  text-align: center;
+  margin-right: 11px;
+}
+
+.pagination-item:last-child{
+  text-transform: uppercase;
+  width: 260px;
+  margin-right: 0;
 }
 
 .pagination-item a{
   color:black;
+  display: block;
 }
 
 .pagination-item:hover{
@@ -1192,10 +1269,15 @@ label{
 }
 
 .pagination-item:active{
-  background: rgba(0, 0, 0, 0.0001);
-  border: 3px solid #DBDBDB;
+  background: #D5D5D5;
   box-sizing: border-box;
+  color:var(--basic-middle-gray);
   border-radius: 3px;
+}
+
+.active-button{
+  background-color: var(--basic-white);
+  border: 3px solid var(--basic-gray);
 }
 
 .visually-hidden:not(:focus):not(:active),
